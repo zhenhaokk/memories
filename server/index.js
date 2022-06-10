@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
+app.get('/', (req, res) => { 
+    res.send('Hello World!');
+});
 
 const CONNECTION_URL =
   "mongodb+srv://zhenhao:zhenhao123123@cluster0.y3i37.mongodb.net/?retryWrites=true&w=majority";
